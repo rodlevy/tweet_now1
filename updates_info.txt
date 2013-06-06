@@ -7,3 +7,11 @@ Added styling for nav in application.css
 
 Adding loging in current user
 Bcrypt to gemfile and environment
+
+6/7
+
+Adding a view for tables
+
+git remote set-url https....
+git push -u origin master
+
