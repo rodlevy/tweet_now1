@@ -15,15 +15,25 @@
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script src="/js/application.js"></script>
 
-    <div class='header'>
-    <div class='nav'>
-    <a href='/'>Home</a>
-    <div>
-  </div>
-
   <title></title>
 </head>
 <body>
+
+   <div class='header'>
+    <div class='nav'>
+    <a href='/'>Home</a>
+    <%if current_user%>
+    <a>Welcome <%=current_user.first_name%></a>
+    <a href='/logout'>Logout</a>
+    
+    <%else%>
+    <a href='/login'>Login/Create</a>
+    
+    <%end%>
+    <div>
+  </div>
+  
   <%= yield %>
 </body>
 </html>
+

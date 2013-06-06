@@ -2,3 +2,8 @@
 
 Added home nav to layout.erb
 Added styling for nav in application.css
+
+6/6
+
+Adding loging in current user
+Bcrypt to gemfile and environment
