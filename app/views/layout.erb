@@ -19,21 +19,22 @@
 </head>
 <body>
 
-   <div class='header'>
-    <div class='nav'>
+ <div class='header'>
+  <div id='nav'>
     <a href='/'>Home</a>
     <%if current_user%>
     <a>Welcome <%=current_user.first_name%></a>
     <a href='/logout'>Logout</a>
     
     <%else%>
-    <a href='/login'>Login/Create</a>
+    <a id='login-hook' href='/login'>Login</a>
+    <a id='create-hook' href='/create_user'>Create New Account</a>
+
     
     <%end%>
-    <div>
-  </div>
-  
-  <%= yield %>
-</body>
+    </div>
+
+    <%= yield %>
+  </body>
 </html>
 

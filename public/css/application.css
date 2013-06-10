@@ -14,9 +14,15 @@ th {
 
 }
 
-.header .nav{
+.header #nav{
   position: relative;
   left: 100px;
+  margin: 0;
+  padding-right: 50px;
+}
+
+.header #nav a{
+  padding-right: 25px;
 }
 
 body, select, input, textarea {  
@@ -64,7 +70,12 @@ h1, h2 {
 h3 {
   font-family: Helvetica, Arial, sans-serif;
 }
-#click{
+#click {
   font-size: 10px;
   font-style: italic;
 }
+
+/*#login-layout {
+  background-color: gray;
+  float: left;
+}*/

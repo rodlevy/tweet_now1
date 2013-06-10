@@ -6,8 +6,17 @@ post '/create_user' do
 end
 
 get '/login' do
+  if request.xhr?
+    erb :_login, :layout => false, :locals => {:user => @user}
+  else
+    erb :login
+  end
+end
+
+get '/create_user' do
   erb :login
 end
+
 
 post '/login' do
   @user = User.authenticate(params[:user])
