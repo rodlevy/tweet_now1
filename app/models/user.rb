@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
-  
 
-  validates :name, :length => { :minimum => 3, :message => "must be at least 3 characters" }
+  attr_reader :entered_password
+
   validates :entered_password, :length => { :minimum => 6 }
   validates :email, :uniqueness => true, :format => /.+@.+\..+/
 
@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   end
 
   def password=(new_password)
-
+    @entered_password = new_password
     @password = BCrypt::Password.create(new_password)
     self.password_hash = @password
   end
