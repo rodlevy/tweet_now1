@@ -5,6 +5,7 @@ $(document).ready(function() {
 		console.log(url);
 		$.get(url, function(url_response){
 			console.log(url_response);
+			$('.container').hide();
 			$('#login-hook').closest('div').append(url_response);
 		});
 
@@ -20,16 +21,17 @@ $(document).ready(function() {
 			console.log(new_nav)
 			$('#login-layout').hide();
 			$('#nav').html(new_nav);
+			$('.container').show();
 		});
 	});
-	$('#create-hook').on('click', function(event){
-		event.preventDefault();
-		var url = $(this).attr('href');
-		$.get(url, function(url_body){
-			var form = $(url_body).find('#regular-create').html();
-			$('#create-hook').closest('div').append(form);
-		});
-	});
+	// $('#create-hook').on('click', function(event){
+	// 	event.preventDefault();
+	// 	var url = $(this).attr('href');
+	// 	$.get(url, function(url_body){
+	// 		var form = $(url_body).find('#regular-create').html();
+	// 		$('#create-hook').closest('div').append(form);
+	// 	});
+	// });
 });
 
 
