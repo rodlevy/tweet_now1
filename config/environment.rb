@@ -20,6 +20,9 @@ require 'sinatra'
 require "sinatra/reloader" if development?
 
 require 'erb'
+require 'carrierwave'
+require 'carrierwave/orm/activerecord'
+require 'carrierwave/processing/mini_magick'
 
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
