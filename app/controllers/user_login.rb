@@ -1,8 +1,6 @@
 post '/create_user' do
   new_user = User.create(params[:user])
-  # p @errors = new_user.errors.messages
-  p new_user.valid?
-  p '<<<<<<<<<<<<<<<<<<<'
+
   if new_user.invalid?
     @errors = new_user.errors
     p @errors
