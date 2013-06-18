@@ -15,7 +15,7 @@ gem 'activerecord'
 
 gem 'rake'
 gem 'bcrypt-ruby'
-
+gem 'twitter'
 gem 'shotgun'
 
 gem 'carrierwave'

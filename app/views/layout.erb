@@ -13,31 +13,32 @@
   <link rel="stylesheet" href="/css/application.css">
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
   <script src="/js/application.js"></script>
-  <script src="/jquery.js"></script>
 
 
   <title></title>
 </head>
 <body>
+<header>
+  <nav>
+   <div class='header'>
+    <div id='nav'>
+      <a href='/'>Home</a>
+      <%if current_user%>
+      <a>Welcome <%=current_user.first_name%></a>
+      <a href='/logout'>Logout</a>
+      
+      <%else%>
+      <a id='login-hook' href='/login'>Login</a>
+      <a id='create-hook' href='/create_user'>Create New Account</a>
 
-<nav>
- <div class='header'>
-  <div id='nav'>
-    <a href='/'>Home</a>
-    <%if current_user%>
-    <a>Welcome <%=current_user.first_name%></a>
-    <a href='/logout'>Logout</a>
-    
-    <%else%>
-    <a id='login-hook' href='/login'>Login</a>
-    <a id='create-hook' href='/create_user'>Create New Account</a>
-
-    
-    <%end%>
-  </div>
- </div>
-</nav>
+      
+      <%end%>
+    </div>
+   </div>
+  </nav>
+</header>
 
   <%= yield %>
 </body>
